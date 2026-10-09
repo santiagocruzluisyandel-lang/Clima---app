@@ -274,11 +274,11 @@ const btnCompartir = document.getElementById('btnCompartir');
 btnCompartir.addEventListener('click', function () {
   // Toma los datos que se muestran en pantalla
   const ciudad = document.querySelector('.resultado h3')?.textContent || 'tu ciudad';
-  const temp = document.querySelector('.temperatura')?.textContent || '?°C';
-  
-  // Crea el mensaje y abre WhatsApp
-  const mensaje = `El clima en ${ciudad} es de ${temp}`;
+  const temp = document.querySelector('.temperatura')?.textContent || '??°C';
+
+  // Crea el mensaje y abre WhatsApp (usa acento grave `` ` ``)
+  const mensaje = `El clima en ${ciudad} es de ${temp}\n👉 Mira la app: https://santiagocruzluisyandel-lang.github.io/Clima---app/`;
   const enlace = `https://wa.me/?text=${encodeURIComponent(mensaje)}`;
-  
+
   window.open(enlace, '_blank');
 });
